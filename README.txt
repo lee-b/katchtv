@@ -55,7 +55,7 @@ Then, just run KatchTV from the command line, or make a KDE icon for it :)
 
 Let me know if you run into any problems -- just email:
 
- lee.b@digitalunleashed.com
+ leebraid@gmail.com
 
 Comments, suggestions, and improvements are also welcome, of course!
 
