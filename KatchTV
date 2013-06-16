@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+#
+# Copyright (c) 2005-2006 by Lee Braiden.  Released under the GNU General Public
+# License, version 2 or later.  Please see the included LICENSE.txt file for details.
+# Legally, that file should have been included with this one.  If not, please contact
+# Lee Braiden (email lee.b@digitalunleashed.com) for a copy.
+#
+"""
+KatchTV is a broadcatcher, or RSS feed handler with support for enclosures and bittorrent downloads.  KatchTV makes it easy to find and add new "channels" from the web, and to keep up with favourite podcasts and vodcasts, and watch them, all from one simple application."""
+
+def mainFunc():
+	"""Loads the program, runs it, and shuts down again.""" 
+#	import pychecker.checker
+	import sys
+	import os
+	import copy
+	
+	reload(sys)
+	sys.setdefaultencoding('utf8')
+	
+	appRoot = os.path.dirname(os.path.abspath(os.path.realpath(sys.argv[0])))
+	
+	from kdecore import KAboutData, KCmdLineArgs, KApplication
+	
+	sys.path.append(os.path.join(appRoot, u'code'))
+	import config
+	
+	myargv = copy.copy(sys.argv)
+	app = KApplication(myargv, str(config.appFullVersion))
+	
+	from KTVMainWindow import KTVMainWindow
+	
+	aboutData = KAboutData(str(config.appName), str(config.appName), str(config.appVersion), str(__doc__), KAboutData.License_GPL, str(config.appCopyright), str(config.appBlurb), str(config.appHomepage), str(config.appBugEmailAddr))
+	
+	args = KCmdLineArgs.init(sys.argv, aboutData)
+	
+	print u"""
+	Welcome to """ + config.appName + u"""
+	Use the --help argument for version info etc.
+	
+	Please wait a moment while the application loads.
+	
+	"""
+	
+	mainWin = KTVMainWindow(config.appFullVersion)
+	
+	app.setMainWidget(mainWin)
+	mainWin.showMaximized()
+	
+	mainWin.enableThreads()
+	try:
+		app.exec_loop()
+	finally:
+		mainWin.disableThreads()
+		mainWin.saveAll()
+
+try:
+	try:
+		mainFunc()
+	except KeyboardInterrupt:
+		print "User interrupt; quiting.  Please allow some time for other threads to stop."
+except RuntimeError:
+	pass

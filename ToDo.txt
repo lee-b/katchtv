@@ -1,0 +1,44 @@
+Crucial
+====
+* Fix deletion of channels; currently crashes
+* Fix saving/loading of feeds (currently loses external datatypes; see shelve docs for solution)
+* Limit number of retries for direct downloads.
+* Resume bittorrent/direct downloads!
+* Fix side panel resize
+* Make loading and saving of config vars thread safe!  Currently reporting corruption!!
+* Handle javascript: links, rather than trying to launch(!) them externally.
+* Move UI-blocking stuff like feed loading to a separate UI task queue, and display
+   friendly messages while it loads :)
+
+Short-term
+=======
+* If no eta/average speed is available for BT (probably is), then make one by keeping a list of speeds per sec (or whatever
+  the update period is) for the last x mins, and then averaging that list.
+* decode to unicode from local encoding in any input (via Add dialog, for instance), since we deliberately
+  ignore user's locale by default.
+* Mark items in ready to watch page with "NOTE: Media has been deleted from disk."
+  if the LOCAL_PATH file doesn't exist any more
+* Use a separate last view variable for detecting which episodes have been seen by the viewer,
+  rather than using the lastCheck field of the feed, which is updated regularly.
+* Fix character set encoding/decoding in Media Items.  Currently messes
+  up even simple things like apostrophes.
+* TaskPool.AbortTask doesn't seem to work so well; find a better solution.
+* Use config.{load,save}ConfigVar in Media.Manager._{load,save}Items
+* UI Redesign, with less manual hacking, and clean use of overridden kdepyuic files.
+* Status area that shows currently used diskspace, number of downloads, total download/upload rate, etc.
+
+Medium-term
+========
+* Expiring items; auto-recycle space
+* Support proxies everywhere (just feed/mimetype checks now) (probably by using urllib?)
+
+Long-term
+======
+* Find out size of bittorrent enclosures for feed window, and display that instead of the size of the .torrent file
+* Add/Edit/Delete for channel directories, and support loading and saving them
+* Make it quit after playing without crashing, if this can be done without patching
+  pykde, kxinewidget, or kde itself.  If not, try to track down the problem and
+  report it or submit a patch.
+* Wrap includes with try blocks and complain if required packages are missing
+* Advanced background tasks, like recompressing videos to save diskspace, or applying filters or
+  sound enhancement/normalisation, etc.

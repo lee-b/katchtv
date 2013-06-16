@@ -1,0 +1,2 @@
+* Unnecessary tags for embedded video removed
+* Manually adding channels works again
