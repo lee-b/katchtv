@@ -3,7 +3,7 @@
 # Copyright (c) 2005-2006 by Lee Braiden.  Released under the GNU General Public
 # License, version 2 or later.  Please see the included LICENSE.txt file for details.
 # Legally, that file should have been included with this one.  If not, please contact
-# Lee Braiden (email lee.b@digitalunleashed.com) for a copy.
+# Lee Braiden (email leebraid@gmail.com) for a copy.
 #
 """
 KatchTV is a broadcatcher, or RSS feed handler with support for enclosures and bittorrent downloads.  KatchTV makes it easy to find and add new "channels" from the web, and to keep up with favourite podcasts and vodcasts, and watch them, all from one simple application."""

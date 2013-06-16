@@ -2,7 +2,7 @@
 # Copyright (c) 2005-2006 by Lee Braiden.  Released under the GNU General Public
 # License, version 2 or later.  Please see the included LICENSE.txt file for details.
 # Legally, that file should have been included with this one.  If not, please contact
-# Lee Braiden (email lee.b@digitalunleashed.com) for a copy.
+# Lee Braiden (email leebraid@gmail.com) for a copy.
 #
 import sys
 import os
