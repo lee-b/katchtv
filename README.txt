@@ -5,6 +5,13 @@ Welcome to KatchTV.  Please refer to the HTML manual in the Docs directory,
 or from inside the program, for usage instructions.
 
 
+Screenshots
+-----------
+
+![Screenshot of KatchTV showing its video playback](/Docs/screenshots/geekbrief.png?raw=true "Video playback in KatchTV")
+![Screenshot of KatchTV showing its multi-threaded, multi-protocol downloading](/Docs/screenshots/downloads.png?raw=true "Multi-threaded, multi-protocol downloading in KatchTV")
+![Screenshot of KatchTV showing directory browsing](/Docs/screenshots/zencast.png?raw=true "Browsing a directory of webcasts in KatchTV")
+
 Requirements
 ------------
 
@@ -65,3 +72,4 @@ License
 
 This software is licensed under the GNU General Public License, version 2.
 Consult the included LICENSE.txt file for specific details.
+
