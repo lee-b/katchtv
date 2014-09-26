@@ -8,11 +8,11 @@ or from inside the program, for usage instructions.
 Screenshots
 -----------
 
-![Screenshot of KatchTV showing its video playback](/lee-b/katchtv/master/Docs/screenshots/geekbrief.png?raw=true "Video playback in KatchTV")
+![Screenshot of KatchTV showing its video playback](https://raw.githubusercontent.com/lee-b/katchtv/master/Docs/screenshots/geekbrief.png?raw=true "Video playback in KaetchTV")
 
-![Screenshot of KatchTV showing its multi-threaded, multi-protocol downloading](/lee-b/katchtv/master/Docs/screenshots/downloads.png?raw=true "Multi-threaded, multi-protocol downloading in KatchTV")
+![Screenshot of KatchTV showing its multi-threaded, multi-protocol downloading](https://raw.githubusercontent.com/lee-b/katchtv/master/Docs/screenshots/downloads.png?raw=true "Multi-threaded, multi-protocol downloading in KatchTV")
 
-![Screenshot of KatchTV showing directory browsing](/lee-b/katchtv/master/Docs/screenshots/zencast.png?raw=true "Browsing a directory of webcasts in KatchTV")
+![Screenshot of KatchTV showing directory browsing](https://raw.githubusercontent.com/lee-b/katchtv/master/Docs/screenshots/zencast.png?raw=true "Browsing a directory of webcasts in KatchTV")
 
 
 Requirements
